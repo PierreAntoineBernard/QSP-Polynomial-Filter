@@ -134,30 +134,6 @@ def plot_two_poly(poly1, poly2):
     plt.show()
 
 
-# ================================================================
-# ----------------------------- TEST -----------------------------
-# ================================================================
-'''
-#nono = 1.1
-#poly_target_np = np.array([0.2,0.3,0.1,0.3,0.2])/nono
 
-nono = 0.035
-poly_target_np = np.array([-0.0031831, 0., 0.0031831, 0., -0.0031831, 0.,
-  0.0031831, 0., -0.0031831, 0., 0.0031831, 0.,
- -0.0031831, 0., 0.0031831, 0., -0.0031831, 0.,
-  0.0031831, 0., -0.0031831])/nono
-
-partner, profile, renormalization = partner_poly(poly_target_np)
-
-print(partner/np.sqrt(renormalization))
-print(poly_target_np/np.sqrt(renormalization))
-
-plot_two_poly(poly_target_np/np.sqrt(renormalization), partner/np.sqrt(renormalization))
-
-plt.plot(range(len(profile)),profile,'o-')
-plt.title('Renormalization =' + str(renormalization))
-plt.show()
-
-'''
 
 
