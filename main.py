@@ -12,7 +12,7 @@ from torchaudio.transforms import FFTConvolve
 
 from Christo_Darb_Ker import Chebyshev, norms_for_chebyshev, Christoffel_Darboux_Kernel, eval_poly, convert_poly_to_laurent
 from get_angle import *
-from get_partner.get_partner_poly_real_no_renorm import *
+from get_partner_poly_real_no_renorm import *
 
 
 # ================================================================
@@ -110,3 +110,4 @@ for k in range(N):
 #print('Sequence of angles type 0:', sequence_of_angles_0)
 #print('Sequence of angles type 1:', sequence_of_angles_1)
 print('Error:', np.max( np.abs( np.array(sequence_of_angles_0) - np.array(sequence_of_angles_1) ) ) )
+
