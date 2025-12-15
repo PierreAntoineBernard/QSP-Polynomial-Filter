@@ -71,34 +71,3 @@ def convert_poly_to_laurent(coeffs, degree):
     mat = poly_to_laurent_transition_mat(degree)
     laurent_coeffs = coeffs @ mat
     return laurent_coeffs
-
-'''
-# -----------------------------
-#           EXAMPLE
-# -----------------------------
-
-poly_mat = Chebyshev(10)
-norms = norms_for_chebyshev(10)
-y = 0
-kernel = Christoffel_Darboux_Kernel(poly_mat, norms, y)/100
-laurent_coeffs = convert_poly_to_laurent(kernel, 10)
-
-
-
-x = np.linspace(-1,1,500)
-ys = np.array([eval_poly(kernel, xi) for xi in x])
-plt.plot(x, ys)
-plt.title('Christoffel-Darboux Kernel at y=0, real line')  
-plt.show()
-
-x = np.linspace(-np.pi,np.pi,500)
-ys = np.array([np.abs(eval_poly(laurent_coeffs, np.exp(1j*xi))) for xi in x])
-plt.plot(x, ys)
-plt.title('Christoffel-Darboux Kernel at y=0, unit circle')  
-plt.show()
-
-print('Laurent coeffs:', laurent_coeffs)
-
-
-# ================================================================
-'''
